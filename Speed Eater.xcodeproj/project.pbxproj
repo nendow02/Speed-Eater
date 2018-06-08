@@ -9,25 +9,37 @@
 /* Begin PBXBuildFile section */
 		2B38711120C62E1600A2EFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38711020C62E1600A2EFD5 /* AppDelegate.swift */; };
 		2B38711320C62E1600A2EFD5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B38711220C62E1600A2EFD5 /* GameScene.sks */; };
-		2B38711520C62E1600A2EFD5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2B38711420C62E1600A2EFD5 /* Actions.sks */; };
 		2B38711720C62E1600A2EFD5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38711620C62E1600A2EFD5 /* GameScene.swift */; };
 		2B38711920C62E1600A2EFD5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38711820C62E1600A2EFD5 /* GameViewController.swift */; };
 		2B38711C20C62E1600A2EFD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B38711A20C62E1600A2EFD5 /* Main.storyboard */; };
 		2B38711E20C62E1800A2EFD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B38711D20C62E1800A2EFD5 /* Assets.xcassets */; };
 		2B38712120C62E1800A2EFD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B38711F20C62E1800A2EFD5 /* LaunchScreen.storyboard */; };
+		2B38712C20C63B9E00A2EFD5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38712B20C63B9E00A2EFD5 /* MenuViewController.swift */; };
+		2B38713020C63F3A00A2EFD5 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38712F20C63F3A00A2EFD5 /* GameOverViewController.swift */; };
+		2B38713220C75B2A00A2EFD5 /* VungleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B38713120C75B2A00A2EFD5 /* VungleSDK.framework */; };
+		2B4E799D20C8C8F200D8D882 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E799C20C8C8F200D8D882 /* Stats.swift */; };
+		2BA911A320CA203700CD2E48 /* Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA911A220CA203700CD2E48 /* Save.swift */; };
+		2BA911A620CA30AE00CD2E48 /* bite.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BA911A520CA30AE00CD2E48 /* bite.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B38710D20C62E1600A2EFD5 /* Speed Eater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speed Eater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B38711020C62E1600A2EFD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B38711220C62E1600A2EFD5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		2B38711420C62E1600A2EFD5 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		2B38711620C62E1600A2EFD5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		2B38711820C62E1600A2EFD5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		2B38711B20C62E1600A2EFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B38711D20C62E1800A2EFD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B38712020C62E1800A2EFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B38712220C62E1800A2EFD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B38712920C63AFF00A2EFD5 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		2B38712B20C63B9E00A2EFD5 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		2B38712F20C63F3A00A2EFD5 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		2B38713120C75B2A00A2EFD5 /* VungleSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VungleSDK.framework; sourceTree = "<group>"; };
+		2B38713520C7602400A2EFD5 /* Speed Eater-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Speed Eater-Bridging-Header.h"; sourceTree = "<group>"; };
+		2B4E799C20C8C8F200D8D882 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		2BA911A220CA203700CD2E48 /* Save.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Save.swift; sourceTree = "<group>"; };
+		2BA911A520CA30AE00CD2E48 /* bite.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bite.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B38713220C75B2A00A2EFD5 /* VungleSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +59,7 @@
 			children = (
 				2B38710F20C62E1600A2EFD5 /* Speed Eater */,
 				2B38710E20C62E1600A2EFD5 /* Products */,
+				2B38712820C63AFF00A2EFD5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,16 +75,38 @@
 			isa = PBXGroup;
 			children = (
 				2B38711020C62E1600A2EFD5 /* AppDelegate.swift */,
-				2B38711220C62E1600A2EFD5 /* GameScene.sks */,
-				2B38711420C62E1600A2EFD5 /* Actions.sks */,
-				2B38711620C62E1600A2EFD5 /* GameScene.swift */,
 				2B38711820C62E1600A2EFD5 /* GameViewController.swift */,
+				2B38711220C62E1600A2EFD5 /* GameScene.sks */,
+				2B38711620C62E1600A2EFD5 /* GameScene.swift */,
+				2B38712F20C63F3A00A2EFD5 /* GameOverViewController.swift */,
+				2B38712B20C63B9E00A2EFD5 /* MenuViewController.swift */,
+				2BA911A220CA203700CD2E48 /* Save.swift */,
+				2B4E799C20C8C8F200D8D882 /* Stats.swift */,
 				2B38711A20C62E1600A2EFD5 /* Main.storyboard */,
 				2B38711D20C62E1800A2EFD5 /* Assets.xcassets */,
+				2BA911A420CA308F00CD2E48 /* Sounds */,
 				2B38711F20C62E1800A2EFD5 /* LaunchScreen.storyboard */,
 				2B38712220C62E1800A2EFD5 /* Info.plist */,
 			);
 			path = "Speed Eater";
+			sourceTree = "<group>";
+		};
+		2B38712820C63AFF00A2EFD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B38713520C7602400A2EFD5 /* Speed Eater-Bridging-Header.h */,
+				2B38713120C75B2A00A2EFD5 /* VungleSDK.framework */,
+				2B38712920C63AFF00A2EFD5 /* ARKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2BA911A420CA308F00CD2E48 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				2BA911A520CA30AE00CD2E48 /* bite.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +141,7 @@
 				TargetAttributes = {
 					2B38710C20C62E1600A2EFD5 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -132,10 +169,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B38711C20C62E1600A2EFD5 /* Main.storyboard in Resources */,
+				2BA911A620CA30AE00CD2E48 /* bite.mp3 in Resources */,
 				2B38711320C62E1600A2EFD5 /* GameScene.sks in Resources */,
 				2B38711E20C62E1800A2EFD5 /* Assets.xcassets in Resources */,
 				2B38712120C62E1800A2EFD5 /* LaunchScreen.storyboard in Resources */,
-				2B38711520C62E1600A2EFD5 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +185,11 @@
 			files = (
 				2B38711720C62E1600A2EFD5 /* GameScene.swift in Sources */,
 				2B38711920C62E1600A2EFD5 /* GameViewController.swift in Sources */,
+				2B38713020C63F3A00A2EFD5 /* GameOverViewController.swift in Sources */,
 				2B38711120C62E1600A2EFD5 /* AppDelegate.swift in Sources */,
+				2B38712C20C63B9E00A2EFD5 /* MenuViewController.swift in Sources */,
+				2B4E799D20C8C8F200D8D882 /* Stats.swift in Sources */,
+				2BA911A320CA203700CD2E48 /* Save.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,16 +333,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6P4K6MX264;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Speed Eater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Greg-Endow.Speed-Eater";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Greg-Endow.Speed-Eater";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Speed Eater-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,16 +359,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6P4K6MX264;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Speed Eater/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Greg-Endow.Speed-Eater";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Greg-Endow.Speed-Eater";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Speed Eater-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

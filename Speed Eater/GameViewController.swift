@@ -9,57 +9,66 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import ARKit
 
-class GameViewController: UIViewController {
 
+class GameViewController: UIViewController,ARSKViewDelegate,ARSessionDelegate {
+    @IBOutlet var sceneView: ARSKView!
+    var open = false
     override func viewDidLoad() {
+        Stats.shared.newHighScore = false
+        Stats.shared.score = 0
         super.viewDidLoad()
-        
-        // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
-        // including entities and graphs.
+        sceneView.delegate = self
+        sceneView.session.delegate = self
         if let scene = GKScene(fileNamed: "GameScene") {
             
-            // Get the SKScene from the loaded GKScene
             if let sceneNode = scene.rootNode as! GameScene? {
-                
-                // Copy gameplay related content over to the scene
-                sceneNode.entities = scene.entities
-                sceneNode.graphs = scene.graphs
-                
-                // Set the scale mode to scale to fit the window
+
                 sceneNode.scaleMode = .aspectFill
-                
-                // Present the scene
-                if let view = self.view as! SKView? {
+                sceneNode.viewController = self
+                if let view = self.view as! ARSKView? {
                     view.presentScene(sceneNode)
-                    
-                    view.ignoresSiblingOrder = true
-                    
-                    view.showsFPS = true
-                    view.showsNodeCount = true
+                    view.ignoresSiblingOrder = false
+                    view.showsFPS = false
+                    view.showsNodeCount = false
                 }
             }
         }
     }
 
+    
+    func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
+        for anchor in anchors {
+        let faceAnchor = anchor as! ARFaceAnchor
+        if faceAnchor.blendShapes[.jawOpen]!.doubleValue > 0.5 {
+            open = true
+        }else {
+            guard open == true && Stats.shared.gameStarted == true else {return}
+            open = false
+            Stats.shared.bite += 1
+        }
+            
+    }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let configuration = ARFaceTrackingConfiguration()
+        sceneView.session.run(configuration)
+        
+    }
+    
     override var shouldAutorotate: Bool {
-        return true
+        return false
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
+            return .portrait
     }
 
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    
 }
