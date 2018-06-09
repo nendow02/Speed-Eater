@@ -9,6 +9,7 @@
 import SpriteKit
 import GameplayKit
 import ARKit
+import GameKit
 
 class GameScene: SKScene {
     
@@ -19,16 +20,18 @@ class GameScene: SKScene {
     let burger1 = SKTexture(image: #imageLiteral(resourceName: "burger1:4"))
     var burgerImages = [SKTexture]()
     var previousBite = 0
-    var sceneView = ARSKView()
     var viewController: UIViewController?
     var time = SKLabelNode()
     var burger = SKSpriteNode()
     var printTime = SKLabelNode()
     var timeBackground = SKSpriteNode()
-    var countdownBackground = SKSpriteNode()
+    var background = SKSpriteNode()
+    
     override func didMove(to view: SKView) {
-        self.backgroundColor = .clear
-        sceneView = self.view as! ARSKView
+        background = childNode(withName: "background") as! SKSpriteNode
+        if Stats.shared.cameraView == true {
+            background.isHidden = true
+        }
         burgerImages = [burger4,burger3,burger2,burger1]
         timeBackground = childNode(withName: "timeBackground") as! SKSpriteNode
         burger = childNode(withName: "burger") as! SKSpriteNode
@@ -47,14 +50,12 @@ class GameScene: SKScene {
             }
         }
         let countdownAction = SKAction.sequence([SKAction.wait(forDuration: 1),SKAction.run(countdown)])
-        let countdownSequence = SKAction.sequence([SKAction.wait(forDuration: 1),SKAction.repeat(countdownAction, count: 5)])
         
-        run(countdownSequence,completion:{
+        run(SKAction.repeat(countdownAction, count: 5),completion:{
             self.printTime.isHidden = true
             self.burger.isHidden = false
             self.time.isHidden = false
             self.timeBackground.isHidden = false
-            Stats.shared.gameStarted = true
             self.game()
         })
         printTime.fontSize = 150
@@ -66,6 +67,7 @@ class GameScene: SKScene {
     
     
     func game() {
+        Stats.shared.gameStarted = true
         var myTime = 30
         
         func printTimeEnd() {
@@ -93,7 +95,9 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         guard previousBite != Stats.shared.bite && Stats.shared.gameStarted == true else {return}
+        if Stats.shared.soundEffects == true {
         run(bite)
+        }
         if Stats.shared.bite == 4{
         burger.texture = nil
         }else {
@@ -107,6 +111,26 @@ class GameScene: SKScene {
             Stats.shared.bestScore = Stats.shared.score
             Stats.shared.newHighScore = true
         }
+        guard Stats.shared.gcEnabled == true && Stats.shared.bestScore < 50 && Stats.shared.newHighScore == true else {return}
+            let a50 = GKAchievement(identifier: "50_burgers")
+            a50.percentComplete = Double(Stats.shared.score) * 2
+            a50.showsCompletionBanner = true
+            GKAchievement.report([a50], withCompletionHandler: nil)
+        guard Stats.shared.bestScore < 40 else {return}
+            let a40 = GKAchievement(identifier: "40_burgers")
+            a40.percentComplete = Double(Stats.shared.score) * 2.5
+            a40.showsCompletionBanner = true
+            GKAchievement.report([a40], withCompletionHandler: nil)
+        guard Stats.shared.bestScore <= 30 else {return}
+            let a30 = GKAchievement(identifier: "30_burgers")
+            a30.percentComplete = Double(Stats.shared.score) * 3.34
+            a30.showsCompletionBanner = true
+            GKAchievement.report([a30], withCompletionHandler: nil)
+        guard Stats.shared.bestScore <= 20 else {return}
+            let a20 = GKAchievement(identifier: "20_burgers")
+            a20.percentComplete = Double(Stats.shared.score) * 5
+            a20.showsCompletionBanner = true
+            GKAchievement.report([a20], withCompletionHandler: nil)
     }
 
     

@@ -16,4 +16,8 @@ class Stats {
     var newHighScore = false
     var gameStarted = false
     var adTurn = 0
+    var removeAds = false
+    var gcEnabled = false
+    var cameraView = false
+    var soundEffects = true
 }

@@ -13,9 +13,11 @@ import ARKit
 
 
 class GameViewController: UIViewController,ARSKViewDelegate,ARSessionDelegate {
+
     @IBOutlet var sceneView: ARSKView!
     var open = false
     override func viewDidLoad() {
+        UIApplication.shared.isIdleTimerDisabled = true
         Stats.shared.newHighScore = false
         Stats.shared.score = 0
         super.viewDidLoad()
@@ -27,7 +29,7 @@ class GameViewController: UIViewController,ARSKViewDelegate,ARSessionDelegate {
 
                 sceneNode.scaleMode = .aspectFill
                 sceneNode.viewController = self
-                if let view = self.view as! ARSKView? {
+                if let view = self.view as! SKView? {
                     view.presentScene(sceneNode)
                     view.ignoresSiblingOrder = false
                     view.showsFPS = false

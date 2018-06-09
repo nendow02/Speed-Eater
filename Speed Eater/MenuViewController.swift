@@ -8,16 +8,22 @@
 
 import UIKit
 import ARKit
+import GameKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController,GKGameCenterControllerDelegate {
     
+    static let shared = MenuViewController()
     @IBOutlet weak var bestScore: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        authenticateLocalPlayer()
         if let unarchive =  NSKeyedUnarchiver.unarchiveObject(withFile: Save.archiveURL.path) as? Save{
-        Stats.shared.bestScore = unarchive.bestScore
-        Stats.shared.adTurn = unarchive.adTurn
+            Stats.shared.bestScore = unarchive.bestScore
+            Stats.shared.adTurn = unarchive.adTurn
+            Stats.shared.removeAds = unarchive.removeAds
+            Stats.shared.cameraView = unarchive.cameraView
+            Stats.shared.soundEffects = unarchive.soundEffects
         }
         bestScore.text = "Best: \(Stats.shared.bestScore)"
     }
@@ -27,6 +33,21 @@ class MenuViewController: UIViewController {
             self.present(alert,animated: true,completion: nil)
         }
     }
-
-
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+    }
+    func authenticateLocalPlayer() {
+        let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
+        
+        localPlayer.authenticateHandler = {(ViewController, error) -> Void in
+            if((ViewController) != nil) {
+                self.present(ViewController!, animated: true, completion: nil)
+            } else if (localPlayer.isAuthenticated) {
+             Stats.shared.gcEnabled = true
+            } else {
+            Stats.shared.gcEnabled = false
+            }
+        }
+    }
+    
 }

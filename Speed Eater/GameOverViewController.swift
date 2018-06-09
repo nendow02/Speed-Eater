@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameKit
 
 class GameOverViewController: UIViewController {
 
@@ -17,19 +18,29 @@ class GameOverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if Stats.shared.adTurn == 2{
+        if Stats.shared.removeAds == true {
+        }
+        else if Stats.shared.adTurn == 2{
             Stats.shared.adTurn = 0
             try! sdk.playAd(self, options: nil, placementID: "DEFAULT-0356197")
         }else {
             Stats.shared.adTurn += 1
         }
-        NSKeyedArchiver.archiveRootObject(Save(bestScore: Stats.shared.bestScore,adTurn:Stats.shared.adTurn), toFile: Save.archiveURL.path)
+        NSKeyedArchiver.archiveRootObject(Save(bestScore: Stats.shared.bestScore,adTurn:Stats.shared.adTurn,removeAds:Stats.shared.removeAds,cameraView:Stats.shared.cameraView,soundEffects:Stats.shared.soundEffects), toFile: Save.archiveURL.path)
         
         score.text = String(Stats.shared.score)
         if Stats.shared.newHighScore{
             bestScore.text = "New Highscore!"
+            guard Stats.shared.gcEnabled == true else {return}
+            let bestScoreInt = GKScore(leaderboardIdentifier:"leaderboard")
+            bestScoreInt.value = Int64(Stats.shared.bestScore)
+            GKScore.report([bestScoreInt]) { (error) in
+                if error != nil {
+                    return
+                }
+            }
         }else{
-        bestScore.text = String(Stats.shared.bestScore)
+            bestScore.text = "Best:\(Stats.shared.bestScore)"
         }
      
     }
