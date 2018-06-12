@@ -16,6 +16,10 @@ class SettingsViewController: UIViewController,SKProductsRequestDelegate,SKPayme
     @IBOutlet var cameraViewSwitchOutlet: UISwitch!
     @IBOutlet var soundEffectsSwitchOutlet: UISwitch!
     
+    @IBAction func privacyPolicy(_ sender: UIButton) {
+        let link = URL(string: "https://sites.google.com/site/gregendowgames/privacy-policy")
+        UIApplication.shared.open(link!, options:[:], completionHandler: nil)
+    }
     @IBAction func cameraViewSwitch(_ sender: UISwitch) {
         Stats.shared.cameraView = !Stats.shared.cameraView
         NSKeyedArchiver.archiveRootObject(Save(bestScore: Stats.shared.bestScore,adTurn:Stats.shared.adTurn,removeAds:Stats.shared.removeAds,cameraView:Stats.shared.cameraView,soundEffects:Stats.shared.soundEffects), toFile: Save.archiveURL.path)
