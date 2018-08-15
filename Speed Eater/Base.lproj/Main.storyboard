@@ -378,6 +378,18 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugb-n8-dOE">
+                                <rect key="frame" x="19" y="331" width="337" height="16.333333333333314"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Score 40 or over to remove ads for free!">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Copperplate"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.73275923730000003" green="0.78527462479999999" blue="0.5610830188" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -386,7 +398,9 @@
                             <constraint firstItem="gXG-ab-CjN" firstAttribute="top" secondItem="cgD-kR-cQA" secondAttribute="bottom" constant="8" id="8Jy-SE-6dF"/>
                             <constraint firstItem="cgD-kR-cQA" firstAttribute="centerX" secondItem="gPQ-bp-EgW" secondAttribute="centerX" id="DF6-HY-taV"/>
                             <constraint firstItem="HL5-qC-rFW" firstAttribute="leading" secondItem="HbV-LU-O8G" secondAttribute="leading" constant="75" id="Fxn-Kn-zWR"/>
+                            <constraint firstItem="Ugb-n8-dOE" firstAttribute="top" secondItem="INK-7M-6JZ" secondAttribute="bottom" constant="30" id="J9C-X1-3U7"/>
                             <constraint firstItem="HL5-qC-rFW" firstAttribute="centerX" secondItem="gPQ-bp-EgW" secondAttribute="centerX" id="KIc-Mu-1Av"/>
+                            <constraint firstItem="Ugb-n8-dOE" firstAttribute="centerX" secondItem="gPQ-bp-EgW" secondAttribute="centerX" id="QSK-b5-WFX"/>
                             <constraint firstItem="HbV-LU-O8G" firstAttribute="bottom" secondItem="HL5-qC-rFW" secondAttribute="bottom" constant="75" id="WrJ-l9-6DA"/>
                             <constraint firstAttribute="bottom" secondItem="sKr-X6-6Up" secondAttribute="bottom" constant="225" id="Wt2-kw-ZXJ"/>
                             <constraint firstItem="INK-7M-6JZ" firstAttribute="top" secondItem="gXG-ab-CjN" secondAttribute="bottom" constant="8" id="X3x-Yz-h5u"/>
@@ -398,6 +412,7 @@
                     </view>
                     <connections>
                         <outlet property="bestScore" destination="INK-7M-6JZ" id="ldE-el-zhR"/>
+                        <outlet property="removeAds" destination="Ugb-n8-dOE" id="6Yd-tf-ffe"/>
                         <outlet property="score" destination="gXG-ab-CjN" id="fUF-Ql-mWJ"/>
                     </connections>
                 </viewController>
@@ -422,7 +437,7 @@
         <image name="settings" width="4096" height="4096"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="J44-hw-Diq"/>
-        <segue reference="zT1-pc-I5i"/>
+        <segue reference="dRq-sH-7Zy"/>
+        <segue reference="smX-9M-kHD"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,12 +13,18 @@ class GameOverViewController: UIViewController {
 
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var bestScore: UILabel!
+    @IBOutlet var removeAds: UILabel!
     
     let sdk = VungleSDK.shared()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if Stats.shared.removeAds == true {
+        if Stats.shared.score >= 40 {
+            Stats.shared.removeAds = true
+            removeAds.text = "Congrats! Ads have been removed for free."
+        }
+        else if Stats.shared.removeAds == true {
+            removeAds.text = ""
         }
         else if Stats.shared.adTurn == 2{
             Stats.shared.adTurn = 0
