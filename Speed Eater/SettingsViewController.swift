@@ -18,7 +18,7 @@ class SettingsViewController: UIViewController,SKProductsRequestDelegate,SKPayme
     
     @IBAction func privacyPolicy(_ sender: UIButton) {
         let link = URL(string: "https://sites.google.com/site/gregendowgames/privacy-policy")
-        UIApplication.shared.open(link!, options:[:], completionHandler: nil)
+        UIApplication.shared.open(link!, options:convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
     }
     @IBAction func cameraViewSwitch(_ sender: UISwitch) {
         Stats.shared.cameraView = !Stats.shared.cameraView
@@ -91,4 +91,9 @@ class SettingsViewController: UIViewController,SKProductsRequestDelegate,SKPayme
         removeAdsOutlet.isEnabled = true
     }
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }
