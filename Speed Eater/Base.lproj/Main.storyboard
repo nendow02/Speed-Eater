@@ -11,13 +11,13 @@
         <!--Menu View Controller-->
         <scene sceneID="p3r-De-eJb">
             <objects>
-                <viewController title="Menu View Controller" id="ZwB-5a-dg7" customClass="MenuViewController" customModule="Speed_Eater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Menu View Controller" modalPresentationStyle="fullScreen" id="ZwB-5a-dg7" customClass="MenuViewController" customModule="Speed_Eater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lls-mW-iN8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2h-8G-oml">
-                                <rect key="frame" x="25" y="355.33333333333331" width="325" height="243.66666666666669"/>
+                                <rect key="frame" x="25" y="409.33333333333331" width="325" height="243.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="d2h-8G-oml" secondAttribute="height" multiplier="4:3" id="sen-7r-BVy"/>
                                 </constraints>
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rq1-g6-UYT">
-                                <rect key="frame" x="45.666666666666657" y="75" width="284" height="38.666666666666657"/>
+                                <rect key="frame" x="45.666666666666657" y="119.00000000000001" width="284" height="38.666666666666671"/>
                                 <attributedString key="attributedText">
                                     <fragment content="SPEED EATING">
                                         <attributes>
@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZO-pI-TdK">
-                                <rect key="frame" x="152" y="153.66666666666666" width="71.333333333333314" height="20.333333333333343"/>
+                                <rect key="frame" x="152" y="197.66666666666666" width="71.333333333333314" height="20.333333333333343"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Best: 0">
                                         <attributes>
@@ -52,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8g-f3-Ppc">
-                                <rect key="frame" x="10" y="269.33333333333331" width="355" height="88.666666666666686"/>
+                                <rect key="frame" x="10" y="323.33333333333331" width="355" height="88.666666666666686"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger4:4" translatesAutoresizingMaskIntoConstraints="NO" id="GaP-yq-6RH">
                                         <rect key="frame" x="0.0" y="0.0" width="88.666666666666671" height="88.666666666666671"/>
@@ -84,7 +84,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5N0-a2-EGx">
-                                <rect key="frame" x="240" y="618" width="115" height="115"/>
+                                <rect key="frame" x="240" y="672" width="115" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5N0-a2-EGx" secondAttribute="height" multiplier="1:1" id="g9H-NV-oue"/>
                                 </constraints>
@@ -298,9 +298,9 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Speed_Eater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BV1-FR-VrT" customClass="GameViewController" customModule="Speed_Eater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="ARSKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.73275923730000003" green="0.78527462479999999" blue="0.5610830188" alpha="1" colorSpace="deviceRGB"/>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
@@ -317,13 +317,13 @@
         <!--Game Over View Controller-->
         <scene sceneID="6Ea-e9-jjZ">
             <objects>
-                <viewController title="Game Over View Controller" id="lbL-TQ-nDW" customClass="GameOverViewController" customModule="Speed_Eater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Game Over View Controller" modalPresentationStyle="fullScreen" id="lbL-TQ-nDW" customClass="GameOverViewController" customModule="Speed_Eater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gPQ-bp-EgW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKr-X6-6Up">
-                                <rect key="frame" x="50" y="326.66666666666669" width="275" height="206.33333333333331"/>
+                                <rect key="frame" x="50" y="380.66666666666669" width="275" height="206.33333333333331"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sKr-X6-6Up" secondAttribute="height" multiplier="4:3" id="vJm-XP-W3s"/>
                                 </constraints>
@@ -334,7 +334,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HL5-qC-rFW">
-                                <rect key="frame" x="75" y="502.33333333333331" width="225" height="146.66666666666669"/>
+                                <rect key="frame" x="75" y="556.33333333333337" width="225" height="146.66666666666663"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="HL5-qC-rFW" secondAttribute="height" multiplier="23:15" id="wIy-Fc-m37"/>
                                 </constraints>
@@ -345,13 +345,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgD-kR-cQA">
-                                <rect key="frame" x="61" y="53" width="253" height="48"/>
+                                <rect key="frame" x="61" y="97" width="253" height="48"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="47"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXG-ab-CjN">
-                                <rect key="frame" x="154" y="109" width="67" height="111"/>
+                                <rect key="frame" x="154" y="153" width="67" height="111"/>
                                 <attributedString key="attributedText">
                                     <fragment content="0">
                                         <attributes>
@@ -363,7 +363,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INK-7M-6JZ">
-                                <rect key="frame" x="137.66666666666666" y="228" width="100" height="29"/>
+                                <rect key="frame" x="137.66666666666666" y="272" width="100" height="29"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Best: 0">
                                         <attributes>
@@ -375,7 +375,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugb-n8-dOE">
-                                <rect key="frame" x="19" y="287" width="337" height="16.333333333333314"/>
+                                <rect key="frame" x="19" y="331" width="337" height="16.333333333333314"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Score 40 or over to remove ads for free!">
                                         <attributes>
@@ -418,8 +418,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="J44-hw-Diq"/>
-        <segue reference="zT1-pc-I5i"/>
+        <segue reference="dRq-sH-7Zy"/>
+        <segue reference="smX-9M-kHD"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="burger1:4" width="4096" height="4096"/>
