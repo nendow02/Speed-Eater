@@ -22,11 +22,11 @@ class SettingsViewController: UIViewController,SKProductsRequestDelegate,SKPayme
     }
     @IBAction func cameraViewSwitch(_ sender: UISwitch) {
         Stats.shared.cameraView = !Stats.shared.cameraView
-        NSKeyedArchiver.archiveRootObject(Save(bestScore: Stats.shared.bestScore,adTurn:Stats.shared.adTurn,removeAds:Stats.shared.removeAds,cameraView:Stats.shared.cameraView,soundEffects:Stats.shared.soundEffects), toFile: Save.archiveURL.path)
+        Save().saveData(bestScore: Stats.shared.bestScore, adTurn:Stats.shared.adTurn, removeAds:Stats.shared.removeAds, cameraView:Stats.shared.cameraView, soundEffects:Stats.shared.soundEffects)
     }
     @IBAction func soundEffectsSwitch(_ sender: UISwitch) {
         Stats.shared.soundEffects = !Stats.shared.soundEffects
-        NSKeyedArchiver.archiveRootObject(Save(bestScore: Stats.shared.bestScore,adTurn:Stats.shared.adTurn,removeAds:Stats.shared.removeAds,cameraView:Stats.shared.cameraView,soundEffects:Stats.shared.soundEffects), toFile: Save.archiveURL.path)
+        Save().saveData(bestScore: Stats.shared.bestScore, adTurn:Stats.shared.adTurn, removeAds:Stats.shared.removeAds, cameraView:Stats.shared.cameraView, soundEffects:Stats.shared.soundEffects)
     }
     @IBAction func removeAds(_ sender: UIButton) {
         if SKPaymentQueue.canMakePayments(){
@@ -87,7 +87,7 @@ class SettingsViewController: UIViewController,SKProductsRequestDelegate,SKPayme
                 }
             }
         }
-        NSKeyedArchiver.archiveRootObject(Save(bestScore: Stats.shared.bestScore,adTurn:Stats.shared.adTurn,removeAds:Stats.shared.removeAds,cameraView:Stats.shared.cameraView,soundEffects:Stats.shared.soundEffects), toFile: Save.archiveURL.path)
+        Save().saveData(bestScore: Stats.shared.bestScore, adTurn:Stats.shared.adTurn, removeAds:Stats.shared.removeAds, cameraView:Stats.shared.cameraView, soundEffects:Stats.shared.soundEffects)
         removeAdsOutlet.isEnabled = true
     }
     

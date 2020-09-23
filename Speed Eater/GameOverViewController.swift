@@ -32,8 +32,7 @@ class GameOverViewController: UIViewController {
         }else {
             Stats.shared.adTurn += 1
         }
-        NSKeyedArchiver.archiveRootObject(Save(bestScore: Stats.shared.bestScore,adTurn:Stats.shared.adTurn,removeAds:Stats.shared.removeAds,cameraView:Stats.shared.cameraView,soundEffects:Stats.shared.soundEffects), toFile: Save.archiveURL.path)
-        
+        Save().saveData(bestScore: Stats.shared.bestScore, adTurn:Stats.shared.adTurn, removeAds:Stats.shared.removeAds, cameraView:Stats.shared.cameraView, soundEffects:Stats.shared.soundEffects)
         score.text = String(Stats.shared.score)
         if Stats.shared.newHighScore{
             bestScore.text = "New Highscore!"

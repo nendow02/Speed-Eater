@@ -18,13 +18,7 @@ class MenuViewController: UIViewController,GKGameCenterControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         authenticateLocalPlayer()
-        if let unarchive =  NSKeyedUnarchiver.unarchiveObject(withFile: Save.archiveURL.path) as? Save{
-            Stats.shared.bestScore = unarchive.bestScore
-            Stats.shared.adTurn = unarchive.adTurn
-            Stats.shared.removeAds = unarchive.removeAds
-            Stats.shared.cameraView = unarchive.cameraView
-            Stats.shared.soundEffects = unarchive.soundEffects
-        }
+        Save().getData()
         bestScore.text = "Best: \(Stats.shared.bestScore)"
     }
     override func viewDidAppear(_ animated: Bool) {

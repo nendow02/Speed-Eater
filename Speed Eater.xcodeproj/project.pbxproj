@@ -12,7 +12,6 @@
 		2B38711720C62E1600A2EFD5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38711620C62E1600A2EFD5 /* GameScene.swift */; };
 		2B38711920C62E1600A2EFD5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38711820C62E1600A2EFD5 /* GameViewController.swift */; };
 		2B38711C20C62E1600A2EFD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B38711A20C62E1600A2EFD5 /* Main.storyboard */; };
-		2B38711E20C62E1800A2EFD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B38711D20C62E1800A2EFD5 /* Assets.xcassets */; };
 		2B38712120C62E1800A2EFD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B38711F20C62E1800A2EFD5 /* LaunchScreen.storyboard */; };
 		2B38712C20C63B9E00A2EFD5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38712B20C63B9E00A2EFD5 /* MenuViewController.swift */; };
 		2B38713020C63F3A00A2EFD5 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38712F20C63F3A00A2EFD5 /* GameOverViewController.swift */; };
@@ -22,7 +21,7 @@
 		2BA911A620CA30AE00CD2E48 /* bite.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2BA911A520CA30AE00CD2E48 /* bite.mp3 */; };
 		2BA911A820CB775400CD2E48 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA911A720CB775400CD2E48 /* SettingsViewController.swift */; };
 		2BA911AA20CC3DC100CD2E48 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA911A920CC3DC100CD2E48 /* GameKit.framework */; };
-		2BA911AC20CC3DC900CD2E48 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA911AB20CC3DC900CD2E48 /* StoreKit.framework */; };
+		2BAD526C24F8646800AF9DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BAD526B24F8646800AF9DEA /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 		2B38711620C62E1600A2EFD5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		2B38711820C62E1600A2EFD5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		2B38711B20C62E1600A2EFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2B38711D20C62E1800A2EFD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B38712020C62E1800A2EFD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B38712220C62E1800A2EFD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B38712920C63AFF00A2EFD5 /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
@@ -45,7 +43,7 @@
 		2BA911A520CA30AE00CD2E48 /* bite.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bite.mp3; sourceTree = "<group>"; };
 		2BA911A720CB775400CD2E48 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2BA911A920CC3DC100CD2E48 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		2BA911AB20CC3DC900CD2E48 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2BAD526B24F8646800AF9DEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +51,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BA911AC20CC3DC900CD2E48 /* StoreKit.framework in Frameworks */,
 				2B38713220C75B2A00A2EFD5 /* VungleSDK.framework in Frameworks */,
 				2BA911AA20CC3DC100CD2E48 /* GameKit.framework in Frameworks */,
 			);
@@ -92,7 +89,7 @@
 				2BA911A220CA203700CD2E48 /* Save.swift */,
 				2B4E799C20C8C8F200D8D882 /* Stats.swift */,
 				2B38711A20C62E1600A2EFD5 /* Main.storyboard */,
-				2B38711D20C62E1800A2EFD5 /* Assets.xcassets */,
+				2BAD526B24F8646800AF9DEA /* Assets.xcassets */,
 				2BA911A420CA308F00CD2E48 /* Sounds */,
 				2B38711F20C62E1800A2EFD5 /* LaunchScreen.storyboard */,
 				2B38712220C62E1800A2EFD5 /* Info.plist */,
@@ -103,7 +100,6 @@
 		2B38712820C63AFF00A2EFD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2BA911AB20CC3DC900CD2E48 /* StoreKit.framework */,
 				2BA911A920CC3DC100CD2E48 /* GameKit.framework */,
 				2B38713520C7602400A2EFD5 /* Speed Eater-Bridging-Header.h */,
 				2B38713120C75B2A00A2EFD5 /* VungleSDK.framework */,
@@ -147,7 +143,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Greg Endow";
 				TargetAttributes = {
 					2B38710C20C62E1600A2EFD5 = {
@@ -188,9 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B38711C20C62E1600A2EFD5 /* Main.storyboard in Resources */,
+				2BAD526C24F8646800AF9DEA /* Assets.xcassets in Resources */,
 				2BA911A620CA30AE00CD2E48 /* bite.mp3 in Resources */,
 				2B38711320C62E1600A2EFD5 /* GameScene.sks in Resources */,
-				2B38711E20C62E1800A2EFD5 /* Assets.xcassets in Resources */,
 				2B38712120C62E1800A2EFD5 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +257,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -286,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -321,6 +318,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -340,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
